@@ -84,7 +84,7 @@ export const Sidebarmenu = () => {
         </Link>
       </div>
       <footer className="flex items-center justify-between">
-        <div className="flex gap-1">
+        <div className="flex gap-1 items-center">
           <Image
             src={"https://github.com/iKitumba.png"}
             width={52}
@@ -93,10 +93,10 @@ export const Sidebarmenu = () => {
             className="rounded-full object-cover"
           />
           <div className="flex flex-col">
-            <strong className="text-zinc-100 text-base font-bold line-clamp-1">
+            <strong className="text-zinc-100 text-sm font-bold line-clamp-1">
               Alberto Kitumba
             </strong>
-            <span className="text-zinc-300 text-base line-clamp-1">
+            <span className="text-zinc-400 text-sm font-normal line-clamp-1">
               @iKitumba
             </span>
           </div>
