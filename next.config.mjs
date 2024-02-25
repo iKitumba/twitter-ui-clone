@@ -5,6 +5,9 @@ const nextConfig = {
       {
         hostname: "github.com",
       },
+      {
+        hostname: "images.pexels.com",
+      },
     ],
   },
 };
