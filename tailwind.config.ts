@@ -19,6 +19,7 @@ const config: Config = {
       colors: {
         twitter: "#1A8CD8",
         twitterhover: "#1d9bf0",
+        separator: "rgba(255, 255, 255, .11)",
       },
     },
   },
