@@ -2,7 +2,6 @@
 
 I like CSS, I confess. I usually use to stylish my apps using pure CSS but in this clone project I gave a chance to Tailwind CSS and surprisingly it did a really good job. Has been pleasurable learn this amazing library.
 
-[preview.jpeg]
 ![Image preview](/.github/preview.jpeg)
 
 ## Technologies
