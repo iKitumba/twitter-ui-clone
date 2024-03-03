@@ -1,3 +1,4 @@
+import { BottomNavigationBar } from "@/components/bottom-navigation-bar";
 import { Rightbar } from "@/components/rightbar";
 import { Sidebarmenu } from "@/components/sidebar-menu";
 import { Tweet } from "@/components/tweet";
@@ -40,10 +41,10 @@ export default function Home() {
       <article className="flex-1 min-h-[300vh] border-x border-separator">
         <header className="flex items-center justify-between gap-3 border-b border-separator">
           <div className="flex-1 flex">
-            <button className="flex-1 px-4 py-6 hover:bg-zinc-900 font-bold text-sm text-zinc-300 transition-all hover:text-gray-400">
+            <button className="flex-1 px-4 py-6 max-[600px]:py-4 hover:bg-zinc-900 font-bold text-sm text-zinc-300 transition-all hover:text-gray-400">
               For you
             </button>
-            <button className="flex-1 px-4 py-6 hover:bg-zinc-900 font-normal text-sm text-gray-400 transition-all hover:text-gray-400">
+            <button className="flex-1 px-4 py-6 max-[600px]:py-4 hover:bg-zinc-900 font-normal text-sm text-gray-400 transition-all hover:text-gray-400">
               Following
             </button>
           </div>
@@ -52,7 +53,7 @@ export default function Home() {
           </button>
         </header>
 
-        <div className="flex gap-2 items-start mt-5 px-4">
+        <div className="flex gap-2 items-start mt-5 px-4 max-[600px]:hidden">
           <Image
             src={"https://github.com/iKitumba.png"}
             width={52}
@@ -83,13 +84,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col pb-16">
           {Array.from({ length: 10 }).map((item, index) => (
             <Tweet key={index} />
           ))}
         </div>
       </article>
       <Rightbar />
+
+      <BottomNavigationBar />
     </main>
   );
 }

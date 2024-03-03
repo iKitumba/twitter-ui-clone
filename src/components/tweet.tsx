@@ -12,32 +12,39 @@ import React from "react";
 
 const tweetStats = [
   {
-    icon: <MessageCircle size={20} />,
+    icon: (
+      <MessageCircle
+        size={20}
+        className="max-[600px]:w-4 max-[600px]:min-w-4"
+      />
+    ),
     number: 242,
   },
   {
-    icon: <Repeat2 size={20} />,
+    icon: <Repeat2 size={20} className="max-[600px]:w-4 max-[600px]:min-w-4" />,
     number: 92,
   },
   {
-    icon: <Heart size={20} />,
+    icon: <Heart size={20} className="max-[600px]:w-4 max-[600px]:min-w-4" />,
     number: 927,
   },
   {
-    icon: <BarChart2 size={20} />,
+    icon: (
+      <BarChart2 size={20} className="max-[600px]:w-4 max-[600px]:min-w-4" />
+    ),
     number: 284,
   },
 ];
 
 export const Tweet = () => {
   return (
-    <div className="flex gap-2 items-start p-4 pb-0  border-y border-separator">
+    <div className="flex w-full gap-2 items-start p-4 pb-0  border-y border-separator">
       <Image
         src={"https://github.com/iKitumba.png"}
         width={52}
         height={52}
         alt="Profile picture"
-        className="rounded-full object-cover"
+        className="rounded-full object-cover max-[600px]:w-10"
       />
       <div className="flex flex-col gap-1 flex-1">
         <p className="flex items-center gap-1 line-clamp-1 text-base">
@@ -60,24 +67,32 @@ export const Tweet = () => {
           className="w-full aspect-video object-cover border border-separator rounded-2xl"
           alt=""
         />
-        <div className="flex items-center gap-2 justify-between my-3">
-          <div className="flex flex-1 gap-2 justify-between">
+        <div className="flex items-center gap-1 justify-between my-3">
+          <div className="flex flex-1 gap-1 justify-between">
             {tweetStats.map((item, index) => (
               <button
-                className="flex items-center gap-1 text-gray-400 hover:text-twitter p-2"
+                className="flex items-center gap-1 text-gray-400 hover:text-twitter py-2"
                 key={index}
               >
                 {item.icon}{" "}
-                <span className="font-normal text-sm">{item.number}</span>
+                <span className="font-normal text-sm max-[600px]:text-xs">
+                  {item.number}
+                </span>
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1">
             <button className="flex items-center gap-1 text-gray-400 hover:text-twitter p-2">
-              <Bookmark size={20} />
+              <Bookmark
+                size={20}
+                className="max-[600px]:w-4 max-[600px]:min-w-4"
+              />
             </button>
             <button className="flex items-center gap-1 text-gray-400 hover:text-twitter p-2">
-              <Share size={20} />
+              <Share
+                size={20}
+                className="max-[600px]:w-4 max-[600px]:min-w-4"
+              />
             </button>
           </div>
         </div>
