@@ -36,7 +36,7 @@ const textAreaIcons = [
 
 export default function Home() {
   return (
-    <main className="max-w-[1260px] mx-auto min-h-screen flex gap-6 items-start">
+    <main className="max-w-[1260px] mx-auto min-h-screen flex gap-6 items-start justify-evenly">
       <Sidebarmenu />
       <article className="flex-1 min-h-[300vh] border-x border-separator max-w-[600px]">
         <header className="flex items-center justify-between gap-3 border-b border-separator">
