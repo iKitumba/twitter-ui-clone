@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <main className="max-w-[1260px] mx-auto min-h-screen flex gap-6 items-start">
       <Sidebarmenu />
-      <article className="flex-1 min-h-[300vh] border-x border-separator">
+      <article className="flex-1 min-h-[300vh] border-x border-separator max-w-[600px]">
         <header className="flex items-center justify-between gap-3 border-b border-separator">
           <div className="flex-1 flex">
             <button className="flex-1 px-4 py-6 max-[600px]:py-4 hover:bg-zinc-900 font-bold text-sm text-zinc-300 transition-all hover:text-gray-400">
