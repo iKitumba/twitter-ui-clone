@@ -6,7 +6,7 @@ import React from "react";
 
 export const Rightbar = () => {
   return (
-    <div className="min-h-screen w-[360px] sticky top-0 right-0 py-3 pr-6 flex flex-col gap-4">
+    <div className="min-h-screen w-[360px] sticky top-0 right-0 py-3 pr-6 hidden flex-col gap-4 lg:flex">
       <label className="flex items-center gap-2 h-12 bg-zinc-900 rounded-full py-2 px-4">
         <Search size={16} className="text-gray-400" />
         <input
