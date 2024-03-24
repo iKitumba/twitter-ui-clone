@@ -3,6 +3,7 @@ import { DotsThree } from "@phosphor-icons/react/dist/ssr";
 import { Search, Settings } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { Button } from "./button";
 
 export const RightBar = () => {
   return (
@@ -70,9 +71,7 @@ export const RightBar = () => {
                 </span>
               </div>
             </div>
-            <button className="py-2 px-4 rounded-full bg-zinc-50 text-zinc-800 text-xs hover:bg-zinc-200 font-bold">
-              Follow
-            </button>
+            <Button>Follow</Button>
           </div>
         ))}
       </section>

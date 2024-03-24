@@ -39,13 +39,15 @@ const tweetStats = [
 export const Tweet = () => {
   return (
     <div className="flex w-full gap-2 items-start p-4 pb-0  border-y border-separator">
-      <Image
-        src={"https://github.com/iKitumba.png"}
-        width={52}
-        height={52}
-        alt="Profile picture"
-        className="rounded-full object-cover max-[600px]:w-10"
-      />
+      <Link href={"/ikitumba"}>
+        <Image
+          src={"https://github.com/iKitumba.png"}
+          width={52}
+          height={52}
+          alt="Profile picture"
+          className="rounded-full object-cover max-[600px]:w-10"
+        />
+      </Link>
       <div className="flex flex-col gap-1 flex-1">
         <p className="flex items-center gap-1 line-clamp-1 text-base">
           <strong className="text-gray-200">Alberto Kitumba</strong>

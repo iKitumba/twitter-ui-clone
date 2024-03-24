@@ -86,7 +86,7 @@ export const SidebarMenu = () => {
         </Link>
       </div>
       <footer className="flex items-center justify-between">
-        <div className="flex gap-1 items-center">
+        <Link href={"/iKitumba"} className="flex gap-1 items-center">
           <Image
             src={"https://github.com/iKitumba.png"}
             width={52}
@@ -102,7 +102,7 @@ export const SidebarMenu = () => {
               @iKitumba
             </span>
           </div>
-        </div>
+        </Link>
         <button className="p-2 rounded-full hover:bg-zinc-800 hidden 2xl:flex">
           <DotsThree weight="bold" size={20} />
         </button>

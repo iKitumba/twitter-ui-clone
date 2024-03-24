@@ -8,6 +8,12 @@ const nextConfig = {
       {
         hostname: "images.pexels.com",
       },
+      {
+        hostname: "twitter.com",
+      },
+      {
+        hostname: "pbs.twimg.com",
+      },
     ],
   },
 };

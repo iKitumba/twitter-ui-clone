@@ -9,6 +9,7 @@ import {
   Smile,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const textAreaIcons = [
   {
@@ -49,13 +50,15 @@ export default function Home() {
       </header>
 
       <div className="flex gap-2 items-start mt-5 px-4 max-[600px]:hidden">
-        <Image
-          src={"https://github.com/iKitumba.png"}
-          width={52}
-          height={52}
-          alt="Profile picture"
-          className="rounded-full object-cover"
-        />
+        <Link href={"/iKitumba"}>
+          <Image
+            src={"https://github.com/iKitumba.png"}
+            width={52}
+            height={52}
+            alt="Profile picture"
+            className="rounded-full object-cover"
+          />
+        </Link>
         <div className="flex flex-col gap-2 flex-1">
           <textarea
             className="resize-y p-3 border-none outline-none bg-transparent placeholder:text-xl placeholder:font-normal placeholder:text-gray-400 text-xl text-gray-50 font-medium"
