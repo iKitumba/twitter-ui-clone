@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-export const Sidebarmenu = () => {
+export const SidebarMenu = () => {
   return (
     <aside className="min-h-screen sticky top-0 left-0 2xl:w-64 w-20 py-3 2xl:px-6 pl-3 flex flex-col justify-between max-[600px]:hidden">
       <div className="flex flex-col">

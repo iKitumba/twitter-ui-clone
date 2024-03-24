@@ -1,6 +1,6 @@
 import { BottomNavigationBar } from "@/components/bottom-navigation-bar";
-import { Rightbar } from "@/components/rightbar";
-import { Sidebarmenu } from "@/components/sidebar-menu";
+import { RightBar } from "@/components/rightbar";
+import { SidebarMenu } from "@/components/sidebar-menu";
 import { Tweet } from "@/components/tweet";
 import {
   Gift,
@@ -37,7 +37,7 @@ const textAreaIcons = [
 export default function Home() {
   return (
     <main className="max-w-[1260px] mx-auto min-h-screen flex gap-6 items-start justify-center  max-[1536px]:gap-4">
-      <Sidebarmenu />
+      <SidebarMenu />
       <article className="flex-1 min-h-[300vh] border-x border-separator max-w-[600px]">
         <header className="flex items-center justify-between gap-3 border-b border-separator">
           <div className="flex-1 flex">
@@ -90,7 +90,7 @@ export default function Home() {
           ))}
         </div>
       </article>
-      <Rightbar />
+      <RightBar />
 
       <BottomNavigationBar />
     </main>
