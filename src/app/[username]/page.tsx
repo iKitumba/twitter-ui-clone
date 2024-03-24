@@ -1,16 +1,10 @@
+"use client";
+import React from "react";
 import { Button } from "@/components/button";
 import { DotsThree, SealCheck } from "@phosphor-icons/react/dist/ssr";
-import {
-  ArrowLeft,
-  CalendarDays,
-  CheckCircle,
-  CircleEllipsis,
-  Link2,
-  MapPin,
-} from "lucide-react";
+import { ArrowLeft, CalendarDays, Link2, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 type ProfilePageProps = {
   params: {
@@ -18,7 +12,11 @@ type ProfilePageProps = {
   };
 };
 
+const tabs = ["Posts", "Respostas", "Destaques", "Midia", "Curtidas"];
+
 const ProfilePage = (props: ProfilePageProps) => {
+  const [activeTab, setActiveTab] = React.useState(0);
+
   return (
     <div className="flex flex-col">
       <header className="flex items-center w-full gap-4 h-14 bg-zinc-950 px-3 sticky top-0">
@@ -99,6 +97,24 @@ const ProfilePage = (props: ProfilePageProps) => {
           </p>
         </div>
       </div>
+
+      <section>
+        <header className="flex items-center w-full justify-between gap-2 overflow-x-auto">
+          {tabs.map((item, index) => (
+            <button
+              onClick={() => setActiveTab(index)}
+              className={`p-3 hover:bg-zinc-900 text-base ${
+                activeTab === index
+                  ? "text-zinc-50 font-bold border-b-[3px] border-twitter"
+                  : "text-zinc-400 font-normal"
+              }`}
+              key={item}
+            >
+              {item}
+            </button>
+          ))}
+        </header>
+      </section>
     </div>
   );
 };
