@@ -5,6 +5,7 @@ import { DotsThree, SealCheck } from "@phosphor-icons/react/dist/ssr";
 import { ArrowLeft, CalendarDays, Link2, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Tweet } from "@/components/tweet";
 
 type ProfilePageProps = {
   params: {
@@ -98,12 +99,12 @@ const ProfilePage = (props: ProfilePageProps) => {
         </div>
       </div>
 
-      <section>
-        <header className="flex items-center w-full justify-between gap-2 overflow-x-auto">
+      <section className="w-full flex flex-col gap-3">
+        <header className="overflow-x-auto flex items-center flex-wrap max-w-full justify-between gap-2">
           {tabs.map((item, index) => (
             <button
               onClick={() => setActiveTab(index)}
-              className={`p-3 hover:bg-zinc-900 text-base ${
+              className={`p-3 hover:bg-zinc-900 text-base w-fit flex items-center justify-center ${
                 activeTab === index
                   ? "text-zinc-50 font-bold border-b-[3px] border-twitter"
                   : "text-zinc-400 font-normal"
@@ -114,6 +115,20 @@ const ProfilePage = (props: ProfilePageProps) => {
             </button>
           ))}
         </header>
+
+        <div className="flex flex-col">
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+        </div>
       </section>
     </div>
   );

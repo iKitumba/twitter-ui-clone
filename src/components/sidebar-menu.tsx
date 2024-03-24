@@ -86,9 +86,11 @@ export const SidebarMenu = () => {
         </Link>
       </div>
       <footer className="flex items-center justify-between">
-        <Link href={"/iKitumba"} className="flex gap-1 items-center">
+        <Link href={"/iamcardib"} className="flex gap-1 items-center">
           <Image
-            src={"https://github.com/iKitumba.png"}
+            src={
+              "https://pbs.twimg.com/profile_images/1767309806073704448/biHbGkLx_400x400.jpg"
+            }
             width={52}
             height={52}
             alt="Profile picture"
@@ -96,10 +98,10 @@ export const SidebarMenu = () => {
           />
           <div className="hidden flex-col 2xl:flex">
             <strong className="text-zinc-100 text-sm font-bold line-clamp-1">
-              Alberto Kitumba
+              Cardi B
             </strong>
             <span className="text-zinc-400 text-sm font-normal line-clamp-1">
-              @iKitumba
+              @iamcardib
             </span>
           </div>
         </Link>

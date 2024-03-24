@@ -39,9 +39,11 @@ const tweetStats = [
 export const Tweet = () => {
   return (
     <div className="flex w-full gap-2 items-start p-4 pb-0  border-y border-separator">
-      <Link href={"/ikitumba"}>
+      <Link href={"/iamcardib"}>
         <Image
-          src={"https://github.com/iKitumba.png"}
+          src={
+            "https://pbs.twimg.com/profile_images/1767309806073704448/biHbGkLx_400x400.jpg"
+          }
           width={52}
           height={52}
           alt="Profile picture"
@@ -50,8 +52,8 @@ export const Tweet = () => {
       </Link>
       <div className="flex flex-col gap-1 flex-1">
         <p className="flex items-center gap-1 line-clamp-1 text-base">
-          <strong className="text-gray-200">Alberto Kitumba</strong>
-          <span className="text-gray-400 font-normal">@ikitumba</span>
+          <strong className="text-gray-200">Cardi B</strong>
+          <span className="text-gray-400 font-normal">@iamcardib</span>
         </p>
         <div className="text-base font-normal text-gray-200 line-clamp-5">
           Já estamos chegando a 100k inscritos. Então resolvi criar uma série
@@ -63,7 +65,7 @@ export const Tweet = () => {
           See more
         </Link>
         <Image
-          src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="https://pbs.twimg.com/media/GJO-pqsaEAAVz39?format=jpg&name=large"
           width={600}
           height={400}
           className="w-full aspect-video object-cover border border-separator rounded-2xl"

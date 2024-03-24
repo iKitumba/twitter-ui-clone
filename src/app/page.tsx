@@ -50,9 +50,11 @@ export default function Home() {
       </header>
 
       <div className="flex gap-2 items-start mt-5 px-4 max-[600px]:hidden">
-        <Link href={"/iKitumba"}>
+        <Link href={"/iamcardib"}>
           <Image
-            src={"https://github.com/iKitumba.png"}
+            src={
+              "https://pbs.twimg.com/profile_images/1767309806073704448/biHbGkLx_400x400.jpg"
+            }
             width={52}
             height={52}
             alt="Profile picture"
