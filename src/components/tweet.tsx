@@ -1,3 +1,4 @@
+import { ITweet } from "@/contexts/TweetContext";
 import {
   BarChart2,
   Bookmark,
@@ -10,33 +11,39 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const tweetStats = [
-  {
-    icon: (
-      <MessageCircle
-        size={20}
-        className="max-[600px]:w-4 max-[600px]:min-w-4"
-      />
-    ),
-    number: 242,
-  },
-  {
-    icon: <Repeat2 size={20} className="max-[600px]:w-4 max-[600px]:min-w-4" />,
-    number: 92,
-  },
-  {
-    icon: <Heart size={20} className="max-[600px]:w-4 max-[600px]:min-w-4" />,
-    number: 927,
-  },
-  {
-    icon: (
-      <BarChart2 size={20} className="max-[600px]:w-4 max-[600px]:min-w-4" />
-    ),
-    number: 284,
-  },
-];
+type TweetProps = {
+  data: ITweet;
+};
 
-export const Tweet = () => {
+export const Tweet = (props: TweetProps) => {
+  const tweetStats = [
+    {
+      icon: (
+        <MessageCircle
+          size={20}
+          className="max-[600px]:w-4 max-[600px]:min-w-4"
+        />
+      ),
+      number: props.data.comments,
+    },
+    {
+      icon: (
+        <Repeat2 size={20} className="max-[600px]:w-4 max-[600px]:min-w-4" />
+      ),
+      number: props.data.shares,
+    },
+    {
+      icon: <Heart size={20} className="max-[600px]:w-4 max-[600px]:min-w-4" />,
+      number: props.data.likes,
+    },
+    {
+      icon: (
+        <BarChart2 size={20} className="max-[600px]:w-4 max-[600px]:min-w-4" />
+      ),
+      number: 284,
+    },
+  ];
+
   return (
     <div className="flex w-full gap-2 items-start p-4 pb-0  border-y border-separator">
       <Link href={"/iamcardib"}>
@@ -56,10 +63,7 @@ export const Tweet = () => {
           <span className="text-gray-400 font-normal">@iamcardib</span>
         </p>
         <div className="text-base font-normal text-gray-200 line-clamp-5">
-          Já estamos chegando a 100k inscritos. Então resolvi criar uma série
-          nova exclusiva para membros, falando sobre os bastidores do canal.
-          Esse é o piloto, onde eu conto sobre os desafios dos primeiros meses,
-          monetização e publicidade.
+          {props.data.content}
         </div>
         <Link href={"/"} className="text-twitter mb-2">
           See more

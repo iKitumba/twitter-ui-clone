@@ -1,8 +1,12 @@
+"use client";
+import React from "react";
 import { PublishForm } from "@/components/publish-form";
 import { Tweet } from "@/components/tweet";
 import { Settings } from "lucide-react";
+import { TweetContext } from "@/contexts/TweetContext";
 
 export default function Home() {
+  const { tweets } = React.useContext(TweetContext);
   return (
     <>
       <header className="flex items-center justify-between gap-3 border-b border-separator">
@@ -22,8 +26,8 @@ export default function Home() {
       <PublishForm />
 
       <div className="flex flex-col pb-16">
-        {Array.from({ length: 10 }).map((item, index) => (
-          <Tweet key={index} />
+        {tweets.map((item) => (
+          <Tweet data={item} key={item.id} />
         ))}
       </div>
     </>

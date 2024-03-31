@@ -6,6 +6,8 @@ import { ArrowLeft, CalendarDays, Link2, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Tweet } from "@/components/tweet";
+import { TweetContext } from "@/contexts/TweetContext";
+import { useRouter } from "next/navigation";
 
 type ProfilePageProps = {
   params: {
@@ -17,11 +19,16 @@ const tabs = ["Posts", "Respostas", "Destaques", "Midia", "Curtidas"];
 
 const ProfilePage = (props: ProfilePageProps) => {
   const [activeTab, setActiveTab] = React.useState(0);
+  const { tweets } = React.useContext(TweetContext);
+  const router = useRouter();
 
   return (
     <div className="flex flex-col">
       <header className="flex items-center w-full gap-4 h-14 bg-zinc-950 px-3 sticky top-0">
-        <button className="h-10 w-10 rounded-full transition-all flex items-center justify-center hover:bg-zinc-900">
+        <button
+          onClick={() => router.back()}
+          className="h-10 w-10 rounded-full transition-all flex items-center justify-center hover:bg-zinc-900"
+        >
           <ArrowLeft size={20} />
         </button>
         <div className="flex flex-col">
@@ -117,17 +124,9 @@ const ProfilePage = (props: ProfilePageProps) => {
         </header>
 
         <div className="flex flex-col">
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
-          <Tweet />
+          {tweets.map((item) => (
+            <Tweet data={item} key={item.id} />
+          ))}
         </div>
       </section>
     </div>
