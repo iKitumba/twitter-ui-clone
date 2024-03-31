@@ -38,6 +38,11 @@ export const PublishForm = () => {
 
   const { handleTweet } = React.useContext(TweetContext);
 
+  const handleClick = () => {
+    handleTweet(value);
+    setValue("");
+  };
+
   return (
     <div className="flex gap-2 items-start mt-5 px-4 max-[600px]:hidden">
       <Link href={"/iamcardib"}>
@@ -56,6 +61,7 @@ export const PublishForm = () => {
           onChange={({ target: { value } }) => setValue(value)}
           className="resize-y p-3 border-none outline-none bg-transparent placeholder:text-xl placeholder:font-normal placeholder:text-gray-400 text-xl text-gray-50 font-medium"
           placeholder="Whats happening?"
+          value={value}
         ></textarea>
         <div className="flex items-center justify-between gap-4 flex-wrap border-t border-separator py-2">
           <div className="flex items-center gap-1">
@@ -69,7 +75,7 @@ export const PublishForm = () => {
             ))}
           </div>
           <button
-            onClick={() => handleTweet(value)}
+            onClick={handleClick}
             className="h-10 px-6 bg-twitter rounded-full flex items-center justify-center font-bold text-gray-200 hover:bg-twitterhover"
           >
             Tweet
