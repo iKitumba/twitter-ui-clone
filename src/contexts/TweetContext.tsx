@@ -126,7 +126,6 @@ export const TweetContextProvider = (props: TweetContextProviderProps) => {
 
   const handleTweet = (text: string) => {
     setTweets((prev) => [
-      ...prev,
       {
         comments: 0,
         content: text,
@@ -134,6 +133,7 @@ export const TweetContextProvider = (props: TweetContextProviderProps) => {
         likes: generateRandomIntNumber(),
         shares: generateRandomIntNumber(),
       },
+      ...prev,
     ]);
   };
 
